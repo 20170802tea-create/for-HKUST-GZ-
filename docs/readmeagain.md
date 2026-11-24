@@ -1,5 +1,5 @@
 # Electronic Music Tech Rider and Steps 
-(This is for my upcoming piece in Thai)
+(This is for my upcoming piece in Dec)
 
 Technical requirements, stage setup, and quick troubleshooting for a live performance featuring a clarinetist switching between **Roland Aerophone** and **acoustic clarinet**, plus live electronics and visuals.
 
