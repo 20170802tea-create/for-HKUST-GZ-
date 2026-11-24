@@ -20,7 +20,7 @@ The **Behringer WING** is a 48-channel digital mixing console built for live sou
 ## Troubleshooting
 
 A. Problem: Loud screeching feedback from stage mics
-**What went wrong:** A microphone is picking up sound from a stage/ear monitor or the main PA speakers and looping it.
+-A microphone is picking up sound from a stage/ear monitor or the main PA speakers and looping it.
 
 **How to fix it:**
 1. Pull down the fader on the ringing mic or monitor bus right away.
@@ -29,7 +29,7 @@ A. Problem: Loud screeching feedback from stage mics
 
 
 B. Problem: No sound from a mic or instrument on stage
-**What went wrong:** On the WING, plugging into a stage box XLR doesn't automatically put it on a fader, or +48V phantom power is off.
+-On the WING, plugging into a stage box XLR doesn't automatically put it on a fader, or +48V phantom power is off.
 
 **How to fix it:**
 1. Press **ROUTING** and make sure the stage box **Source** is actually patched to that **Channel**.
@@ -38,7 +38,7 @@ B. Problem: No sound from a mic or instrument on stage
 
 
 C. Problem: Pops, clicks, dropouts, or no preamp control over AES50
-**What went wrong:** The digital clock between the WING and the stage box isn't synced, or the EtherCON cable is unshielded or too long.
+-The digital clock between the WING and the stage box isn't synced, or the EtherCON cable is unshielded or too long.
 
 **How to fix it:**
 1. Check **SETUP → Audio** on the WING: set **Sync Source** to **Internal** and **48 kHz**.
