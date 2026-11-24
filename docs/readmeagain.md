@@ -1,4 +1,5 @@
-# Live Performance Tech Rider and Steps
+# Electronic Music Tech Rider and Steps 
+(This is for my upcoming piece in Thai)
 
 Technical requirements, stage setup, and quick troubleshooting for a live performance featuring a clarinetist switching between **Roland Aerophone** and **acoustic clarinet**, plus live electronics and visuals.
 
@@ -36,14 +37,25 @@ Technical requirements, stage setup, and quick troubleshooting for a live perfor
 
 ## Quick Troubleshooting
 
-::: tip Problem: No sound from the DPA 4099 clarinet mic
+A. Problem: No sound from the DPA 4099 clarinet mic
+
 **How to fix it:** Check that **+48V phantom power** is turned on for that mixer channel, verify the microdot-to-XLR adapter is screwed in tightly, and confirm the channel isn't muted.
 :::
 
-::: warning Problem: Feedback when switching from Aerophone to acoustic clarinet
-**How to fix it:** Point the stage wedge away from the front of the clarinet bell (or switch to in-ear monitors), and roll off low-mid buildup on the clarinet channel EQ.
-:::
+B. Problem: Feedback when switching from Aerophone to acoustic clarinet
 
-::: tip Problem: Laptop PPT visuals or MIDI keyboard not responding
+**How to fix it:** Point the stage wedge away from the front of the clarinet bell (or switch to in-ear monitors), and roll off low-mid buildup on the clarinet channel EQ.
+
+C. Problem: Aerophone has no sound
+
+**How to fix it:**
+1. If you are **not** using wall power (AC adapter), open the battery compartment and check the inserted batteries.
+2. Make sure the batteries aren't dead or low, check that the `+` and `-` ends match the markings inside, and close the battery cover firmly.
+3. If the batteries are dead, swap in fresh ones or plug the Aerophone's AC power adapter into your power strip instead.
+4. Double-check that the power switch is on, the volume knob is turned up, and the output cable is plugged all the way into the mixing board.
+
+
+D. Problem: Laptop PPT visuals or MIDI keyboard not responding
+
 **How to fix it:** Check the projector display mode (Extend vs. Duplicate) on the laptop, and plug the 15-key MIDI keyboard directly into a laptop USB port rather than an unpowered hub.
-:::
+
