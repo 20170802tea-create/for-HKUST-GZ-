@@ -1,8 +1,3 @@
----
-layout: doc
-title: Behringer WING Live Performance Guide
-sidebar: false
----
 
 # Behringer WING — Live Performance Guide
 
