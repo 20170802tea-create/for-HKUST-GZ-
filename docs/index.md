@@ -1,52 +1,58 @@
 ---
 layout: doc
-title: Behringer WING Setup & Troubleshooting
+title: Behringer WING Live Performance Guide
 sidebar: false
 ---
 
-# Behringer WING Digital Mixer
+# Behringer WING — Live Performance Guide
 
-The **Behringer WING** is a 48-channel digital mixing console used for live sound and studio recording. Unlike older mixers, it separates **Sources** (physical plugs) from **Channels** (the faders you mix with).
+The **Behringer WING** is a 48-channel digital mixing console built for live sound. Because it separates **Sources** (where cables plug in) from **Channels** (the faders you mix), you can patch a whole band from a stage box over one cable and save your show settings in snapshots.
 
-## Setup
+## Live Setup
 
-1. **Power and clock check:** Turn on the WING and open **SETUP → Audio**. Set the sample rate to **48 kHz** and set **Sync Source** to **Internal** if the WING is the main mixer.
-2. **Plug in your inputs:** Connect microphones or instruments to the local XLR inputs on the back, or connect a digital stage box (like an S32) to **AES50 A** using a shielded CAT5e/CAT6 EtherCON cable.
-3. **Patch Sources to Channels:**
-   - Press the **ROUTING** button on the console.
-   - Select **Inputs** (Sources) and pick your input group (Local In or AES50 A).
-   - Assign your mic or instrument Sources to Channels on your fader bank.
-4. **Set gain and phantom power:** Select a channel, turn up the preamp **Gain** until the meter sits in the green/yellow range, and turn on **+48V** only for condenser mics or active DI boxes.
-5. **Patch Outputs:** In **ROUTING → Outputs**, tap the **Unlock** icon, route your **Main** mix (or buses) to your speaker outputs (or **USB Audio** for computer recording), and tap **Lock** again when done.
+1. **Set clock and sample rate:** Turn on the WING, open **SETUP → Audio**, set the sample rate to **48 kHz** (best for low live latency), and set **Sync Source** to **Internal**.
+2. **Connect the stage box:** Run a shielded CAT5e/CAT6 EtherCON cable (under 100 meters) from **AES50 A** on the WING to your digital stage box (like an S32 or DL16).
+3. **Patch stage inputs to channels:**
+   - Press **ROUTING** and select **Inputs** (Sources).
+   - Pick **AES50 A** from the drop-down menu and assign each mic/instrument Source to a mixing Channel.
+   - Name and color-code your channels (Vocals, Drums, Guitar) so you can find them fast during the show.
+4. **Patch Main PA and stage monitors:**
+   - Open **ROUTING → Outputs** and tap **Unlock**.
+   - Route **Main L/R** to your PA speaker outputs (usually the last two XLR outputs on the stage box or console) and your monitor **Buses** to stage wedge outputs or P16 personal mixers (AES50 outputs 33–48 automatically feed Ultranet/P16).
+   - Tap **Lock** when done so nobody accidentally changes speaker routing mid-show.
+5. **Line check and gain staging:** Turn on **+48V** only for condenser mics and active DI boxes, set preamp **Gain** so loud hits stay in the green/yellow (not red), and save a **Snapshot** in **LIBRARY** before doors open.
 
 ## Troubleshooting
 
-::: tip Problem: No sound from a mic or stage box
-**What went wrong:** On the WING, plugging into an XLR jack doesn't automatically put it on a fader—or a condenser mic might not have +48V power.
+::: warning Problem: Loud screeching feedback from stage mics
+**What went wrong:** A microphone is picking up sound from a stage monitor or the main PA speakers and looping it.
 
 **How to fix it:**
-1. Press **ROUTING** and check that the physical **Source** is actually patched to the **Channel** you are turning up.
-2. Check that the channel isn't **Muted** and the main fader is pushed up.
-3. If it's a condenser mic, turn on **+48V** on that Source.
+1. Pull down the fader on the ringing mic or monitor bus right away.
+2. Point stage monitors away from the front of the mics (place wedges directly behind directional mics).
+3. Turn on the **High-Pass Filter (HPF)** on vocal mics and use the channel or bus **EQ** to notch down the exact frequency that is ringing.
+:::
+
+::: tip Problem: No sound from a mic or instrument on stage
+**What went wrong:** On the WING, plugging into a stage box XLR doesn't automatically put it on a fader, or +48V phantom power is off.
+
+**How to fix it:**
+1. Press **ROUTING** and make sure the stage box **Source** is actually patched to that **Channel**.
+2. Check that the channel isn't **Muted**, its fader is up, and it is assigned to **Main**.
+3. If it's a condenser mic or active DI box, turn on **+48V** on that Source.
 :::
 
 ::: warning Problem: Pops, clicks, dropouts, or no preamp control over AES50
-**What went wrong:** The digital clock between the WING and the stage box isn't synced, or the Ethernet cable is unshielded or too long.
+**What went wrong:** The digital clock between the WING and the stage box isn't synced, or the EtherCON cable is unshielded or too long.
 
 **How to fix it:**
-1. Go to **SETUP → Audio** on the WING and set **Sync Source** to **Internal** (and **48 kHz**).
-2. On stage boxes like an S16 or DL16, check that the **SA MASTER** / **SN MASTER** LED is off so the stage box follows the WING's clock.
-3. Use a grounded, shielded EtherCON CAT5e/CAT6 cable (keep runs under 100 meters).
+1. Check **SETUP → Audio** on the WING: set **Sync Source** to **Internal** and **48 kHz**.
+2. On S16/DL16 stage boxes, make sure the **SA MASTER / SN MASTER** LED is off so the stage box follows the WING's clock.
+3. Swap to a grounded, shielded EtherCON CAT5e/CAT6 cable under 100 meters.
 :::
 
-::: tip Problem: Routing screen won't let me change an output
-**What went wrong:** The output patch is locked by default so you don't accidentally unplug your speakers mid-show.
+::: tip Problem: Loading a Snapshot wiped out my PA EQ or routing mid-show
+**What went wrong:** Loading a new song Snapshot overwrote global settings that should stay the same all night.
 
-**How to fix it:** On the **ROUTING → Outputs** screen, tap the **Unlock** icon at the top, make your output changes, and tap **Lock** again to keep them safe.
-:::
-
-::: tip Problem: USB recording to my computer isn't working or sounds glitchy
-**What went wrong:** The sample rate doesn't match between the WING and your recording software, or the cable is going through a USB hub.
-
-**How to fix it:** Plug the **USB-B** port on the back of the WING directly into your computer (no hub), and make sure both the WING (**SETUP → Audio**) and your DAW are set to the same sample rate (**48 kHz** or **44.1 kHz**).
+**How to fix it:** Open the **LIBRARY** screen and set **Global Safes** on your **Main LR**, **Routing**, and **Monitor** sections so Snapshots only change band faders and FX—never your room EQ or speaker routing.
 :::
